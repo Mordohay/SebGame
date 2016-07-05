@@ -1,6 +1,6 @@
 
 public class Character {
-	private final Class CClass;
-	private final Race CRace;
+	private Class CClass;
+	private Race CRace;
 
 }
