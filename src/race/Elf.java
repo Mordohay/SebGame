@@ -14,7 +14,6 @@ public class Elf extends Race {
 
 	public Elf() {
 		super(ElfStrength, ElfAgility, ElfDexterity, ElfMagic, ElfCharisma, ElfEndurance, ElfPerception, ElfIntellect, ElfEgo);
-		// TODO Auto-generated constructor stub
 	}
 
 }
