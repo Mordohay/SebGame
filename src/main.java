@@ -1,4 +1,8 @@
-
+import race.Dwarf;
+import race.Elf;
+import race.Human;
+import race.Orc;
+import race.Race;
 
 public class main {
 
