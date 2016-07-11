@@ -43,10 +43,7 @@ public class Game {
 	}
 	
 	
-	private final Player p1 = new Player("player",1);
 
-	public Player getP1() {
-		return p1;
-	}
+	
 
 }
