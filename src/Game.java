@@ -15,7 +15,7 @@ import race.Race;
 
 // trois choix par tour : attaquer, esquiver, fuir
 public class Game {
-	Random r =  new Random();
+	
 	private List<Monster> MonsterList = new ArrayList<Monster>();
 	Location TabLocation[] = new Location[4];
 	
@@ -29,12 +29,17 @@ public class Game {
 		TabLocation[1]=new Location("Oasis of peace");
 		TabLocation[2]=new Location("DarkCastle");
 		
-		
+		int n=0;
 		for(int i=0;i<3;i++){
-			int n = r.nextInt(3);
+			Random r =  new Random();
+			n = r.nextInt(3);
 			TabLocation[i].setLocationMonster(MonsterList.get(n));
 		}
 		
+	}
+	
+	public Game(){
+		CreateMonster();
 	}
 	
 	

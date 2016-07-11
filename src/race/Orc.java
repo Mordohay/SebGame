@@ -11,6 +11,7 @@ public class Orc extends Race {
 	private static final int OrcIntellect = 7;
 	private static final int OrcEgo = 14;
 
+	
 	public Orc() {
 		super(OrcStrength, OrcAgility, OrcDexterity, OrcMagic, OrcCharisma, OrcEndurance, OrcPerception, OrcIntellect, OrcEgo);
 	}
