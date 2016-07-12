@@ -12,6 +12,7 @@ public class main {
 		Scanner sc = new Scanner(System.in);
 		boolean b=true;
 		int n;
+		Player p1;
 		Game game = new Game();
 		
 		System.out.printf(" \n Please enter a name:");
@@ -27,18 +28,26 @@ public class main {
 				case "Dwarf":
 					b=false;
 					Race Dwarf1 = new Dwarf();
+					p1 = new Player(name, 1,Dwarf1);
+					
 					break;
 			
-				case "Oasis of peace":
+				case "Elf":
 					b=false;
-					n=1;
-					System.out.printf("You will face :" + game.TabLocation[n].getLocationMonster());
+					Race Elf1 = new Elf();
+					p1 = new Player(name, 1,Elf1);
 					break;
-				case "DarkCastle":
+				case "Human":
 					b=false;
-					n=2;
-					System.out.printf("You will face :" + game.TabLocation[n].getLocationMonster());
+					Race Human1 = new Human();
+					p1 = new Player(name, 1,Human1);
 					break;
+				case "Orc":
+					b=false;
+					Race Orc1 = new Orc();
+					p1 = new Player(name, 1,Orc1);
+					break;
+					
 				default:
 					b=true;
 					break;
@@ -80,7 +89,7 @@ public class main {
 		}		
 		// TODO Auto-generated method stub
 
-
+		System.out.printf("\n Game completed !");
 	}
 
 }

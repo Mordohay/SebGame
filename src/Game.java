@@ -38,6 +38,12 @@ public class Game {
 		
 	}
 	
+	public void fight(Race race,Monster monster){
+		
+		//TODO
+		
+	}
+	
 	public Game(){
 		CreateMonster();
 	}
