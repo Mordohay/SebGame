@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import monster.Monster;
 import race.Dwarf;
 import race.Elf;
 import race.Human;
@@ -12,7 +13,7 @@ public class main {
 		Scanner sc = new Scanner(System.in);
 		boolean b=true;
 		int n;
-		Player p1;
+		Player p1 = null;
 		Game game = new Game();
 		
 		System.out.printf(" \n Please enter a name:");
@@ -57,29 +58,75 @@ public class main {
 		}	
 		
 		b=true;
-		
+		Monster monster = game.TabLocation[0].getLocationMonster();
 		while(b){
 			System.out.printf("\n Game created successfully ! \n Please choose a place to fight : \n");
-			System.out.printf("[TowerOfPain] [Oasis of peace]  [DarkCastle]");
+			System.out.printf("[TowerOfPain] [OasisOfPeace]  [DarkCastle] [CanyonOfDeath] [DarkSea]");
 			String place = sc.nextLine();
 			
 			switch (place){
 				case "TowerOfPain":
 					b=false;
 					n=0;
-					System.out.printf("You will face :" + game.TabLocation[n].getLocationMonster());
+					monster = game.TabLocation[n].getLocationMonster();
+					System.out.printf("You will face :" + monster );
 					break;
 			
-				case "Oasis of peace":
+				case "OasisOfPeace":
 					b=false;
 					n=1;
-					System.out.printf("You will face :" + game.TabLocation[n].getLocationMonster());
+					monster = game.TabLocation[n].getLocationMonster();
+					System.out.printf("You will face :" + monster );
 					break;
 				case "DarkCastle":
 					b=false;
 					n=2;
-					System.out.printf("You will face :" + game.TabLocation[n].getLocationMonster());
+					monster = game.TabLocation[n].getLocationMonster();
+					System.out.printf("You will face :" + monster );
 					break;
+					
+				case "CanyonOfDeath":
+					b=false;
+					n=3;
+					monster = game.TabLocation[n].getLocationMonster();
+					System.out.printf("You will face :" + monster );
+					break;
+				case "DarkSea":
+					b=false;
+					n=4;
+					monster = game.TabLocation[n].getLocationMonster();
+					System.out.printf("You will face :" + monster );
+					break;
+				default:
+					b=true;
+					break;
+			
+			}
+		b=true;
+		while(b){
+			System.out.printf("\n Please make a choice \n");
+			System.out.printf("[Attack] [Runaway]");
+			String choice = sc.nextLine();
+			
+			switch (choice){
+				case "Attack":
+					b=false;
+					int k= game.fight(p1.getPlayerRace(), monster);
+					if(k == 1){
+						System.out.printf("\n You win !\n");
+					}
+					else{
+						System.out.printf("\n The monster win !\n");
+					}
+					break;
+			
+				case "Runaway":
+					b=false;
+					n=1;
+					game.fight(p1.getPlayerRace(), monster);
+					System.out.printf("\n please restart the game\n");
+					break;
+			
 				default:
 					b=true;
 					break;
@@ -92,4 +139,5 @@ public class main {
 		System.out.printf("\n Game completed !");
 	}
 
+}
 }

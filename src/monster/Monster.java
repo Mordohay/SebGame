@@ -7,6 +7,7 @@ public abstract class Monster {
 	 
 	 
 
+
 	public Monster(int health,int luck,int intellect,int attack){
 		this.health=health;
 		this.attack=attack;
@@ -22,6 +23,10 @@ public abstract class Monster {
 			return health;
 	}
 	
+	public int getDefense() {
+		return defense;
+	}
+
 	 
 	 public int getAttack() {
 			return attack;

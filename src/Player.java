@@ -11,6 +11,11 @@ public class Player {
 		public Race PlayerRace;
 		
 		
+		public Race getPlayerRace() {
+			return PlayerRace;
+		}
+
+
 		public Player(String name0, int number0, Race race){
 			this.name=name0;
 			this.number=number0;
